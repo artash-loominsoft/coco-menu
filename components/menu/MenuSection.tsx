@@ -98,6 +98,7 @@ function MenuItemCard({
           alt={item.name[language]}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-300"
+          unoptimized={item.image.startsWith('/images/')}
         />
         {item.isNew && (
           <span className="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

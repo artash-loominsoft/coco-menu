@@ -126,6 +126,7 @@ function CartItemCard({ item }: { item: CartItem }) {
           alt={item.name[language]}
           fill
           className="object-cover"
+          unoptimized={item.image.startsWith('/images/')}
         />
       </div>
       <div className="flex-1">

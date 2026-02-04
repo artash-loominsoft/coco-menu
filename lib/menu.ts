@@ -24,7 +24,7 @@ export const menuItems: MenuItem[] = [
     description: { en: 'Premium mixed kebab with rice', fa: 'کباب مخلوط ممتاز با برنج', hy: 'Պրեմիում խառը քաբաբ բրնձով' },
     price: 4500,
     category: 'kebab',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop',
+    image: '/images/vaziri.jpg',
   },
   {
     id: '2',
