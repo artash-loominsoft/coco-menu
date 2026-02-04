@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { menuItems } from '@/lib/menu'
 import { useCartStore } from '@/store/cartStore'
@@ -41,10 +42,11 @@ export default function FeaturedDishes() {
               className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name[language]}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 {item.isNew && (
                   <span className="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

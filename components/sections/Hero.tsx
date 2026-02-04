@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
@@ -13,10 +14,12 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-secondary-900/70 to-accent-900/80 z-10"></div>
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&h=1080&fit=crop"
           alt="Iranian cuisine"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 

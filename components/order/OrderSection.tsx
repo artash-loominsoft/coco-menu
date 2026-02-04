@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useCartStore, CartItem } from '@/store/cartStore'
 import { motion } from 'framer-motion'
@@ -120,10 +121,11 @@ function CartItemCard({ item }: { item: CartItem }) {
       className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col sm:flex-row gap-4"
     >
       <div className="relative w-full sm:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
-        <img
+        <Image
           src={item.image}
           alt={item.name[language]}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </div>
       <div className="flex-1">

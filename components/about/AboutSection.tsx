@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { motion } from 'framer-motion'
 import { FiStar, FiHeart, FiMapPin, FiAward } from 'react-icons/fi'
@@ -141,10 +142,11 @@ export default function AboutSection() {
           className="mb-16"
         >
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&h=600&fit=crop"
               alt="Restaurant interior"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { motion } from 'framer-motion'
 
@@ -33,10 +34,11 @@ export default function Introduction() {
             transition={{ duration: 0.6 }}
             className="relative h-96 rounded-2xl overflow-hidden shadow-xl"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop"
               alt="Iranian cuisine"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </motion.div>
         </div>
